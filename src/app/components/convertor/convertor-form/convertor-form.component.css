@@ -1,0 +1,14 @@
+.convertor-container {
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.example-container {
+  display: flex;
+  margin-left: 20px;
+  align-items: flex-start;
+}

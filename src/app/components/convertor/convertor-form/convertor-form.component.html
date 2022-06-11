@@ -1,0 +1,60 @@
+
+<div class="convertor-container">
+  <mat-card>
+    <mat-card-title>Currency convertor</mat-card-title>
+    <form [formGroup]="baseForm">
+      <mat-card-content>
+        <div class="container">
+          <div class="example-container">
+            <mat-form-field appearance="fill">
+              <mat-label>Enter amout</mat-label>
+              <input
+                matInput
+                placeholder="Amount"
+                type="number"
+                [value]="formName === 'baseForm' ? convertedAmount : baseAmount"
+                formControlName="amount"
+              />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Choose currency</mat-label>
+              <mat-select formControlName="baseCurrency">
+                <mat-option *ngFor="let type of currencyList" [value]="type">{{
+                  type
+                }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+    </form>
+    <form [formGroup]="targetForm">
+      <mat-card-content>
+        <div class="container">
+          <div class="example-container">
+            <mat-form-field appearance="fill">
+              <mat-label>Enter amout</mat-label>
+              <input
+                matInput
+                placeholder="Amount"
+                type="number"
+                formControlName="amount"
+                [value]="formName === 'targetForm' ? convertedAmount : targetAmount"
+              />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Choose currency</mat-label>
+              <mat-select formControlName="targetCurrency">
+                <mat-option *ngFor="let type of currencyList" [value]="type">{{
+                  type
+                }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+        </div>
+      </mat-card-content>
+    </form>
+  </mat-card>
+</div>
+

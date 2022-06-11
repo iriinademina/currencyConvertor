@@ -1,0 +1,5 @@
+<app-convertor-form
+  [convertedAmount]="convertedAmount$ | async"
+  [formName]="toForm"
+  (convert)="convertCurrency($event)">
+</app-convertor-form>

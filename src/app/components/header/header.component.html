@@ -1,0 +1,17 @@
+<p class="container-header">
+  <mat-toolbar class="container">
+    <mat-icon class="white-icon">money_off</mat-icon>
+    <span class="white-icon">Currency Converter</span>
+    <span class="example-spacer"></span>
+    <span class="white-icon">Current cource, UAH: </span>
+    <span class="example-spacer"></span>
+    <ng-container *ngIf="course$ | async as course">
+      <span class="white-course"
+        >{{ course.USD | currency: "USD":true:"1.2-2" }}
+      </span>
+      <span class="white-course"
+        >{{ course.EUR | currency: "EUR":true:"1.2-2" }}
+      </span>
+    </ng-container>
+  </mat-toolbar>
+</p>

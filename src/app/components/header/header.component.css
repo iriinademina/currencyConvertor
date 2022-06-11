@@ -1,0 +1,25 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.container-header {
+  margin: 0px;
+  padding: 0;
+}
+
+mat-toolbar.container {
+  background-color: rgb(112, 112, 209);
+  min-height: 70px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+mat-icon.white-icon {
+  color: white;
+  font-size: 25px;
+}
+
+.white-course {
+  color: white;
+  margin: 0 20px 0;
+}
